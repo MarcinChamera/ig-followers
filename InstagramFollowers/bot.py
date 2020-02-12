@@ -4,7 +4,7 @@ from time import sleep
 class InstaBot:
     # start up webdriver
     def __init__(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(executable_path='/chromedriver/chromedriver')
         # chrome_options = webdriver.ChromeOptions()
 
         # # don't know if necessary on heroku
