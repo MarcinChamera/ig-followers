@@ -1,5 +1,6 @@
-does not work on Heroku because it tries to sign in to the account from Ireland (apparently the place where the westeurope servers are located), so instagram detects unauthorized login and won't let us pass through unless we enter 6-digit verification code which will be send to our mail.
+Requires installed Python 3, pip, Chrome browser version 80.
 
-works fine on localhost though
+Open WINDOWS_RUN to run on Windows.
+Open LINUX_RUN to run on Linux.
 
-uncomment code inside bot.py constructor and comment the rest inside the constructor for it to work on heroku instead on localhost 
+In case you have older version of Chrome and don't want to update it, you'll have to download ChromeDriver from here: https://chromedriver.chromium.org/downloads and paste it to the chromedriver folder (replace the file inside).
