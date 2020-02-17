@@ -5,11 +5,10 @@ import platform
 class InstaBot:
     # start up webdriver
     def __init__(self):
-        if platform.system() == 'Linux':
-            path_to_chromedriver = '/chromedriver/chromedriver'
-        elif platform.system() == 'Windows':
-            path_to_chromedriver = '/chromedriver/chromedriver.exe'
-        self.driver = webdriver.Chrome(executable_path=path_to_chromedriver)
+        if platform.system() == 'Windows':
+            self.driver = webdriver.Chrome(executable_path='/windows_chromedriver/chromedriver.exe')
+        elif platform.system() == 'Linux':
+            self.driver = webdriver.Chrome()
         # chrome_options = webdriver.ChromeOptions()
 
         # # don't know if necessary on heroku
