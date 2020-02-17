@@ -1,10 +1,15 @@
 from selenium import webdriver
 from time import sleep
+import platform
 
 class InstaBot:
     # start up webdriver
     def __init__(self):
-        self.driver = webdriver.Chrome(executable_path='/chromedriver/chromedriver')
+        if platform.system() == 'Linux':
+            path_to_chromedriver = '/chromedriver/chromedriver'
+        elif platform.system() == 'Windows':
+            path_to_chromedriver = '/chromedriver/chromedriver.exe'
+        self.driver = webdriver.Chrome(executable_path=path_to_chromedriver)
         # chrome_options = webdriver.ChromeOptions()
 
         # # don't know if necessary on heroku
