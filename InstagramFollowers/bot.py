@@ -6,16 +6,9 @@ class InstaBot:
     # start up webdriver
     def __init__(self):
         if platform.system() == 'Windows':
-            self.driver = webdriver.Chrome(executable_path='/windows_chromedriver/chromedriver.exe')
+            self.driver = webdriver.Chrome("/chromedriver/chromedriver")
         elif platform.system() == 'Linux':
             self.driver = webdriver.Chrome()
-        # chrome_options = webdriver.ChromeOptions()
-
-        # # don't know if necessary on heroku
-        # chrome_options.add_argument("--no-sandbox")
-
-        # chrome_options.binary_location = '/app/.apt/usr/bin/google-chrome'
-        # self.driver = webdriver.Chrome(executable_path='/app/.chromedriver/bin/chromedriver', chrome_options=chrome_options)       
 
     def login(self, username, password):
         self.driver.get("https://instagram.com")
