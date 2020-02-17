@@ -6,5 +6,5 @@ Run on Linux:\
 Run on Windows:\
     1. Install Python 3 & pip 3.\
     2. Install Chrome browser version 80 and set it as default one.\
-        2.1. In case you have older version of Chrome and don't want to update it, you'll have to download ChromeDriver from here: https://chromedriver.chromium.org/downloads and paste it to the chromedriver folder (replace the file inside).\
+    &nbsp;&nbsp;&nbsp;&nbsp;2.1. In case you have older version of Chrome and don't want to update it, you'll have to download ChromeDriver from&nbsp;&nbsp;&nbsp;&nbsp;here: https://chromedriver.chromium.org/downloads and paste it to the chromedriver folder (replace the file inside).\
     3. Run WINDOWS_RUN.bat.
