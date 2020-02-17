@@ -4,9 +4,13 @@
     <head>
         <meta charset="UTF-8">
         <title>IG</title>
+        <link rel="stylesheet" href="static/style.css">
       </head>
       
-    <body>
-        <h1>{{ unfollowers }}</h1>
+    <body class="notfollowers">
+        <h2>{{ notfollowers_number }} accounts don't follow you back:</h2>
+        {% for notfollower in notfollowers_list %}
+         <p class="notfollower">{{ notfollower }}</p>
+        {% endfor %}
     </body>
 </html>

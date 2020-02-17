@@ -1,16 +1,25 @@
 ﻿<!DOCTYPE html>
 
-<html>
+<html lang="en" dir="ltr">
     <head>
         <meta charset="UTF-8">
-        <title>Index</title>
+        <title>Login Form</title>
+        <link rel="stylesheet" href="static/style.css">
+        <script type="text/javascript">
+            function showLoader() {
+                document.getElementById("loader").style.display = "block";
+            }
+            function hideLoader() {
+                document.getElementById("loader").style.display = "none";
+            }
+        </script>
+        <script src="/InstagramFollowers/libs/jquery-3.4.1.min.js"></script>
       </head>
       
-    <body>
-        <h1>Sign up</h1>
+    <body onload="hideLoader()" onsubmit="showLoader()">
         <hr>
         <!--action - redirect to the "ig" URL once this form is submitted-->
-        <form action="/ig" method="POST">
+        <form class="box" action="/ig" method="POST">
 
             <div class="form-group">
                 <label>Username</label>
@@ -21,7 +30,8 @@
                 <label>Password</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Create a password">
             </div>
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <div id="loader"></div>
         </form>
     </body>
 </html>

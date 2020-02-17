@@ -16,16 +16,12 @@ def ig():
         password = request.form["password"]
         bot = InstaBot()
         bot.login(username, password)
-        unfollowers = bot.get_unfollowers()
+        notfollowers_list = bot.get_unfollowers()
+        notfollowers_number = len(notfollowers_list)
         bot.logout()
         bot.quit()
-        return render_template("ig.html", unfollowers=unfollowers)
+        return render_template("ig.html",
+                               notfollowers_list=notfollowers_list,
+                               notfollowers_number=notfollowers_number)
     else:
         return render_template("ig.html")
-
-    
-'''
-git add InstagramFollowers/.* Procfile requirements.txt webapp.py
-git commit -m "commit"
-git push heroku master
-'''

@@ -52,7 +52,7 @@ class InstaBot:
         last_height, height = 0, 1
         while last_height != height:
             last_height = height
-            sleep(0.5)
+            sleep(1)
             #selenium enables using javascript
             height = self.driver.execute_script("""
                 arguments[0].scrollTo(0, arguments[0].scrollHeight); 
