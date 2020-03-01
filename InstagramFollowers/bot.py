@@ -66,8 +66,9 @@ class InstaBot:
 
     def logout(self):
         sleep(2)
-        self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/header/section/div[1]/div/button/span")\
-            .click()
+        self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/header/section/div[1]/div/button").click()
+        # self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/header/section/div[1]/div/button/span")\
+            # .click()
         sleep(1)
         self.driver.find_elements_by_xpath("/html/body/div[4]/div/div/div/button[9]")
         sleep(3)
